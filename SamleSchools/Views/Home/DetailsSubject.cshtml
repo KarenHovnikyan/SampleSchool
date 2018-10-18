@@ -1,0 +1,57 @@
+﻿@model DAL.Models.Subject
+
+@{
+    ViewBag.Title = "DetailsSubject";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@Html.DisplayFor(model => model.Name)</h2>
+<hr />
+<h2>Teachers</h2>
+<hr />
+<div>
+    <table class="table">
+        <tr>
+            <th> First Name</th>
+            <th> Last Name</th>
+            <th> Age</th>
+            <th> Phone</th>
+        </tr>
+        @foreach (DAL.Models.Teacher item in ViewBag.Teacher)
+        {
+        <tr>
+            <td>@Html.DisplayFor(model => item.FirstName)</td>
+            <td>@Html.DisplayFor(model => item.LastName)</td>
+            <td>@Html.DisplayFor(model => item.Age)</td>
+            <td>@Html.DisplayFor(model => item.Phone)</td>
+        </tr>
+        }
+    </table>
+</div>
+<hr />
+<h2>Pupils</h2>
+<hr />
+<div>
+    <table class="table">
+        <tr>
+            <th> First Name</th>
+            <th> Last Name</th>
+            <th> Age</th>
+            <th> Phone</th>
+        </tr>
+        @foreach (DAL.Models.Pupil item in ViewBag.Pupil)
+        {
+        <tr>
+            <td>@Html.DisplayFor(model => item.FirstName)</td>
+            <td>@Html.DisplayFor(model => item.LastName)</td>
+            <td>@Html.DisplayFor(model => item.Age)</td>
+            <td>@Html.DisplayFor(model => item.HomePhone)</td>
+        </tr>
+        }
+    </table>
+</div>
+<hr />
+<div class="btn btn-default btn-number">
+    @Html.ActionLink(" Back ", "Pupil")
+</div>
+

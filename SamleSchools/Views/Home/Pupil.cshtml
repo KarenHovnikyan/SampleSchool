@@ -1,0 +1,44 @@
+﻿@model IEnumerable<DAL.Models.Pupil>
+
+@{
+    ViewBag.Title = "Pupil";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>Pupil</h2>
+<table class=" table">
+    <tr>
+        <th>@Html.DisplayNameFor(model => model.FirstName)</th>
+        <th>@Html.DisplayNameFor(model => model.LastName)</th>
+        <th>@Html.DisplayNameFor(model => model.Age)</th>
+        <th>@Html.DisplayNameFor(model => model.Address)</th>
+        <th>@Html.DisplayNameFor(model => model.HomePhone)</th>
+        <th>@Html.DisplayNameFor(model => model.SchoolClass)</th>
+        <th></th>
+    </tr>
+    @foreach (DAL.Models.Pupil item in Model)
+    {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.FirstName)</td>
+            <td>@Html.DisplayFor(modelItem => item.LastName)</td>
+            <td>@Html.DisplayFor(modelItem => item.Age)</td>
+            <td>@Html.DisplayFor(modelItem => item.Address)</td>
+            <td>@Html.DisplayFor(modelItem => item.HomePhone)</td>
+            <td>@Html.DisplayFor(modelItem => item.SchoolClass)</td>
+            <td class=" btn-info-block">
+                <div class="btn btn-default btn-number">
+                    @Html.ActionLink("Details", "DetailsPupil", new { id = item.PupilID })
+                </div>
+                <div class="btn btn-default btn-number">
+                    @Html.ActionLink("Edit", "EditPupil", new { id = item.PupilID })
+                </div>
+                <div class="btn btn-default btn-number">
+                    @Html.ActionLink("Delete", "DeletePupil", new { id = item.PupilID })
+                </div>
+            </td>
+        </tr>
+    }
+</table>
+<hr />
+<div class="btn btn-default btn-number">
+    @Html.ActionLink("Create", "CreatePupil")
+</div>

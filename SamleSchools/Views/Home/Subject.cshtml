@@ -1,0 +1,33 @@
+﻿@model IEnumerable<DAL.Models.Subject>
+@{
+    ViewBag.Title = "Subject";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Subject</h2>
+
+<table class=" table">
+    <tr>
+        <th>@Html.DisplayNameFor(model => model.Name)</th>
+        <th></th>
+    </tr>
+    @foreach (DAL.Models.Subject item in Model)
+    {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.Name)</td>
+            <td class=" btn-info-block">
+                <div class="btn btn-default btn-number">
+                    @Html.ActionLink("Details", "DetailsSubject", new { id = item.SubjectID })
+                </div>
+                <div class="btn btn-default btn-number">
+                    @Html.ActionLink("Delete", "DeleteSubject", new { id = item.SubjectID })
+                </div>
+            </td>
+        </tr>
+    }
+</table>
+<hr />
+
+<div class="btn btn-default btn-number">
+    @Html.ActionLink("Create", "CreateSubject")
+</div>

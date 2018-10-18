@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2046
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SamleSchools", "SamleSchools\SamleSchools.csproj", "{360A271A-342B-44C6-BB80-21817F3796C4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{60BA4F3F-5EA4-402B-B340-EB0D5AC2909E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{360A271A-342B-44C6-BB80-21817F3796C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{360A271A-342B-44C6-BB80-21817F3796C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{360A271A-342B-44C6-BB80-21817F3796C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{360A271A-342B-44C6-BB80-21817F3796C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60BA4F3F-5EA4-402B-B340-EB0D5AC2909E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60BA4F3F-5EA4-402B-B340-EB0D5AC2909E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60BA4F3F-5EA4-402B-B340-EB0D5AC2909E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60BA4F3F-5EA4-402B-B340-EB0D5AC2909E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A5838941-A678-4BB2-B60F-42CE62E829EF}
+	EndGlobalSection
+EndGlobal

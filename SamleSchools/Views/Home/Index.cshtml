@@ -1,0 +1,41 @@
+﻿@model IEnumerable<DAL.Models.School>
+@{
+    ViewBag.Title = "Schhool";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>School</h2>
+<table class=" table">
+    <tr>
+        <th>@Html.DisplayNameFor(model => model.Name)</th>
+        <th>@Html.DisplayNameFor(model => model.Address)</th>
+        <th>@Html.DisplayNameFor(model => model.Phone)</th>
+        <th></th>
+    </tr>
+    @foreach (DAL.Models.School item in Model)
+    {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.Name)</td>
+            <td>@Html.DisplayFor(modelItem => item.Address)</td>
+            <td>@Html.DisplayFor(modelItem => item.Phone)</td>
+            <td class=" btn-info-block">
+                <div class="btn btn-default btn-number">
+                    @Html.ActionLink("Details", "DetailsSchool", new { id = item.SchoolID })
+                </div>
+                <div class="btn btn-default btn-number">
+                    @Html.ActionLink("Edit", "EditSchool", new { id = item.SchoolID })
+                </div>
+                <div class="btn btn-default btn-number">
+                    @Html.ActionLink("Delete", "DeleteSchool", new { id = item.SchoolID })
+                </div>
+            </td>
+        </tr>
+    }
+</table>
+<hr />
+<div class="btn btn-default btn-number">
+    @Html.ActionLink("Create", "CreateSchool")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
